@@ -1,7 +1,7 @@
 const { ICommand } = require('@libs/builders/command')
 const axios = require('axios').default
 const { apikey } = require('@config')
-const ttdl = require ('tiktok-video-downloader')
+//const ttdl = require ('tiktok-video-downloader')
 
 /**
  * @type { ICommand }
