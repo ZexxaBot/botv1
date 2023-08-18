@@ -49,8 +49,6 @@
         "rimraf": "^3.0.2",
         "sanzy-api": "^1.0.1",
         "sqlite3": "^5.1.6",
-
-        "tiktok-video-downloader": "^1.0.4",
         "tinyurl": "^1.1.7",
         "uuid": "^9.0.0",
         "validasi-nomor-telpon": "^1.0.0",
