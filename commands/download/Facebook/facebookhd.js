@@ -14,13 +14,13 @@ module.exports = {
     example: '{prefix}{command} https://Facebook.com',
     callback: async ({ msg, args }) => {
                 let { data } = await axios.get('https://shanndevapi.com/api/downloader/facebook?url={url}'.format({ url: args }))
-                /* return console.log(data) */
+                return console.log(data)
                 
                 if ( data.status !== true) return msg.reply('cannot find HD video, try !fbsd')
                 
                 let zexxaMsg = `*BERHASIL MENDAPATKAN VIDEO HD*`
                 
-                msg.replyVideo({ url: data.result.media }, zexxaMsg).catch(() => { return msg.reply('gagal mengirim video')})
+                msg.replyVideo({ url: data.result.media[0] }, zexxaMsg).catch(() => { return msg.reply('gagal mengirim video')})
                 }
                 
     }
