@@ -20,9 +20,9 @@ module.exports = {
                 
                 let zexxaMsg = `*BERHASIL MENDAPATKAN VIDEO HD*`
 
-                for (var i of data.result) {
+                for (var i of data.result.hd) {
                 
-                msg.replyVideo({ url: data.result.media[0] }, zexxaMsg).catch(() => { return msg.reply('gagal mengirim video')})
+                msg.replyVideo({ url: i.url }, zexxaMsg).catch(() => { return msg.reply('gagal mengirim video')})
                 }
     }
                 
