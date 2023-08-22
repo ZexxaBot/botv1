@@ -17,7 +17,7 @@ module.exports = {
         if (msg.typeCheck.isImage || msg.typeCheck.isQuotedImage) {
             await fs.writeFileSync('./database/src/shanndev.jpg', image)
             let file = await TelegraPh('./database/src/shanndev.jpg')
-            client.sendMessage(msg.from, { document: { url: `https://api.caliph.biz.id/api/removebg?img=${file}&apikey=caliphkey` }, mimetype: 'image/png', fileName: 'Removebg.png' }, { quoted: message }).catch(() => { return msg.reply('Terjadi kesalahan') })
+            client.sendMessage(msg.from, { document: { url: `https://shanndevapi.com/api/converter/removebg?img=${file}` }, mimetype: 'image/png', fileName: 'Removebg.png' }, { quoted: message }).catch(() => { return msg.reply('Terjadi kesalahan') })
             fs.unlinkSync('./database/src/shanndev.jpg')
         } else return msg.reply('Send/reply image dengan caption #removebg')
     }
