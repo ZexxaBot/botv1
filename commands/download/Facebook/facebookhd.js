@@ -19,8 +19,11 @@ module.exports = {
                 if ( data.status !== true) return msg.reply('cannot find HD video, try !fbsd')
                 
                 let zexxaMsg = `*BERHASIL MENDAPATKAN VIDEO HD*`
+
+                for (var i of data.result) {
                 
                 msg.replyVideo({ url: data.result.media[0] }, zexxaMsg).catch(() => { return msg.reply('gagal mengirim video')})
                 }
+    }
                 
     }
