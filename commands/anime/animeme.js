@@ -6,7 +6,7 @@ module.exports = {
     description: 'Random Anime Meme',
     limit: true,
     waitMessage: true,
-    minArgs: 1,
+    minArgs: 0,
     expectedArgs: '',
     example: '{prefix}{command} ',
     callback: async ({ msg, fullArgs }) => {
