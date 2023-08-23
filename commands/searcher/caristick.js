@@ -12,7 +12,7 @@ module.exports = {
     expectedArgs: 'gojosatoru, among, anime, animegif, bucin, rabbit, manusialidi, dinokuning, pentol, doge, gura, mukalu, spongebob, kawanspongebob, patrick, patrickgif, random, paimon, chat',
     example: '{prefix}{command} dinokuning',
     callback: async({ msg, fullArgs, client }) => {
-		let { headers, data } = await axios({ method: 'get', url: `https://api.botcahx.live/api/sticker/${fullArgs}?apikey=DeHBriJv`, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer' })
+		let { headers, data } = await axios({ method: 'get', url: `https://shanndevapi.com/api/searcher/stickerpack?query=${fullArgs}`, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer' })
         if (!data || !headers) return msg.reply('Gagal mendapatkan gambar')
         
         let buffer = await writeExif({ data: data, mimetype: headers['content-type'] }, { packname: 'Zexxa', author: 'Bot' })
